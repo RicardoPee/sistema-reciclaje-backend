@@ -15,7 +15,7 @@ Bienvenido al repositorio del Backend del Sistema de Reciclaje. Esta API RESTful
 
 
 ## ⚙️ Características Principales
-* **Autenticación y Autorización:** Endpoints protegidos mediante JWT, separando roles (Ej. `ADMIN`, `CLIENTE`).
+* **Autenticación y Autorización:** Endpoints protegidos mediante JWT, separando roles (Ej. `ADMI`, `CLIENTE`).
 * **Gestión de Usuarios y Roles:** Registro seguro con contraseñas encriptadas (Bcrypt).
 * **Transacciones:** Lógica de acumulación de puntos por actividad y canje de recompensas.
 * **Integridad de Datos:** Base de datos relacional completamente normalizada.
