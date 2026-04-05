@@ -11,7 +11,8 @@ Bienvenido al repositorio del Backend del Sistema de Reciclaje. Esta API RESTful
 
 ## 📊 Diagrama Entidad-Relación (ER)
 
-> <img width="1347" height="1238" alt="image" src="https://github.com/user-attachments/assets/f5e18ce0-c0f9-46c6-bc91-65de56dd3cac" />
+> <img width="1581" height="1277" alt="image" src="https://github.com/user-attachments/assets/53dc11a1-4929-4c70-a235-0d229a888384" />
+
 
 ## ⚙️ Características Principales
 * **Autenticación y Autorización:** Endpoints protegidos mediante JWT, separando roles (Ej. `ADMIN`, `CLIENTE`).
