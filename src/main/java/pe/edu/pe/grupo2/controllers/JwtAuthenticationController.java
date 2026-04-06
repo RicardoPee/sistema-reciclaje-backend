@@ -19,7 +19,6 @@ import pe.edu.pe.grupo2.serviceimplements.JwtUserDetailsService;
 
 //Clase 3
 @RestController
-@CrossOrigin
 public class JwtAuthenticationController {
     @Autowired
     private AuthenticationManager authenticationManager;
