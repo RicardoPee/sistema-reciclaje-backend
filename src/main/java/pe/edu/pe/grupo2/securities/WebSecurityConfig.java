@@ -84,7 +84,7 @@ public class WebSecurityConfig {
     }
 
     @Bean
-    public org.springframework.boot.web.servlet.FilterRegistrationBean<org.springframework.web.filter.CorsFilter> corsFilter() {
+    public org.springframework.web.cors.CorsConfigurationSource corsConfigurationSource() {
         org.springframework.web.cors.CorsConfiguration configuration = new org.springframework.web.cors.CorsConfiguration();
         configuration.setAllowedOriginPatterns(java.util.Arrays.asList("http://localhost:4200", "https://*.vercel.app", "https://*.railway.app"));
         configuration.setAllowedMethods(java.util.Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH", "HEAD"));
@@ -92,9 +92,13 @@ public class WebSecurityConfig {
         configuration.setAllowCredentials(true);
         org.springframework.web.cors.UrlBasedCorsConfigurationSource source = new org.springframework.web.cors.UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
-        
+        return source;
+    }
+
+    @Bean
+    public org.springframework.boot.web.servlet.FilterRegistrationBean<org.springframework.web.filter.CorsFilter> customCorsFilter(org.springframework.web.cors.CorsConfigurationSource corsConfigurationSource) {
         org.springframework.boot.web.servlet.FilterRegistrationBean<org.springframework.web.filter.CorsFilter> bean = 
-            new org.springframework.boot.web.servlet.FilterRegistrationBean<>(new org.springframework.web.filter.CorsFilter(source));
+            new org.springframework.boot.web.servlet.FilterRegistrationBean<>(new org.springframework.web.filter.CorsFilter(corsConfigurationSource));
         bean.setOrder(org.springframework.core.Ordered.HIGHEST_PRECEDENCE);
         return bean;
     }
