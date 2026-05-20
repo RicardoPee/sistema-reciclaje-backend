@@ -103,6 +103,12 @@
             <artifactId>spring-security-core</artifactId>
         </dependency>
 
+        <!-- WebSockets para Notificaciones en Tiempo Real -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+
      </dependencies>
 
      <build>

@@ -72,7 +72,7 @@ public class WebSecurityConfig {
                                 "/webjars/**",
                                 "/"
                         ).permitAll()
-                        .requestMatchers("/login", "//login", "/roles", "//roles", "/usuarios", "//usuarios", "/usuarios/**", "//usuarios/**").permitAll()
+                        .requestMatchers("/login", "//login", "/roles", "//roles", "/usuarios", "//usuarios", "/usuarios/**", "//usuarios/**", "/ws/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults())

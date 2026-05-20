@@ -5,8 +5,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pe.edu.pe.grupo2.entities.Actividad;
 import pe.edu.pe.grupo2.repositories.IActividadRepository;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import pe.edu.pe.grupo2.serviceinterfaces.IActividadService;
-
 import java.util.List;
 import java.util.Random;
 
@@ -18,6 +18,9 @@ public class ActividadServiceImplement implements IActividadService {
 
     @Autowired
     private pe.edu.pe.grupo2.repositories.UserRepository uR;
+
+    @Autowired
+    private SimpMessagingTemplate messagingTemplate;
 
     private static final String CHARS = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
@@ -81,6 +84,9 @@ public class ActividadServiceImplement implements IActividadService {
             if (user != null) {
                 user.setPuntosAcumulados(user.getPuntosAcumulados() + a.getPuntos());
                 uR.save(user);
+                
+                // Emitir WebSocket
+                messagingTemplate.convertAndSend("/topic/notificaciones/" + user.getIdUser(), "Tu reciclaje ha sido APROBADO. ¡Ganaste " + a.getPuntos() + " puntos!");
             }
         }
     }
@@ -94,7 +100,10 @@ public class ActividadServiceImplement implements IActividadService {
         }
         a.setEstado("RECHAZADA");
         aR.save(a);
-        // No se suman puntos. Si ya los tenía (no debería), no se restan.
+        // No se suman puntos.
+        if (a.getU() != null) {
+            messagingTemplate.convertAndSend("/topic/notificaciones/" + a.getU().getIdUser(), "Tu reciclaje ha sido RECHAZADO.");
+        }
     }
 
     @Override
