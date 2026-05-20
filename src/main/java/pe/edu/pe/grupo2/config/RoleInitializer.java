@@ -14,12 +14,16 @@ public class RoleInitializer {
         return args -> {
             if (roleRepository.count() == 0) {
                 Rol admin = new Rol();
-                admin.setNombreRol("ADMINISTRADOR");
+                admin.setNombreRol("ADMIN");
                 roleRepository.save(admin);
 
-                Rol user = new Rol();
-                user.setNombreRol("USUARIO");
-                roleRepository.save(user);
+                Rol cliente = new Rol();
+                cliente.setNombreRol("CLIENTE");
+                roleRepository.save(cliente);
+
+                Rol reciclador = new Rol();
+                reciclador.setNombreRol("RECICLADOR");
+                roleRepository.save(reciclador);
                 
                 System.out.println("Roles inicializados correctamente en la BD vacía.");
             }
