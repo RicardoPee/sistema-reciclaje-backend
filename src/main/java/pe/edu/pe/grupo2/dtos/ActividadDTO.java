@@ -6,13 +6,18 @@ import pe.edu.pe.grupo2.entities.User;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+
 public class ActividadDTO {
 
+    @JsonAlias({"id_actividad", "idActividad"})
     private int idActividad;
+    @JsonAlias({"fecha_recepcion", "fechaRecepcion"})
     private LocalDate fecha_recepcion;
     private int puntos;
     private int cantidad;
     private String estado;
+    @JsonAlias({"codigo_reserva", "codigoReserva"})
     private String codigoReserva;
     private TipoActividad ta;
     private CentroReciclaje cr;

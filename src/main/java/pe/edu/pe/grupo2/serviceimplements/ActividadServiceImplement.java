@@ -20,6 +20,9 @@ public class ActividadServiceImplement implements IActividadService {
     private pe.edu.pe.grupo2.repositories.UserRepository uR;
 
     @Autowired
+    private pe.edu.pe.grupo2.repositories.INotificacionesRepository nR;
+
+    @Autowired
     private SimpMessagingTemplate messagingTemplate;
 
     private static final String CHARS = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
@@ -85,6 +88,13 @@ public class ActividadServiceImplement implements IActividadService {
                 user.setPuntosAcumulados(user.getPuntosAcumulados() + a.getPuntos());
                 uR.save(user);
                 
+                // Guardar notificación en BD
+                pe.edu.pe.grupo2.entities.Notificaciones notification = new pe.edu.pe.grupo2.entities.Notificaciones();
+                notification.setMensaje("Tu reciclaje ha sido APROBADO. ¡Ganaste " + a.getPuntos() + " puntos!");
+                notification.setFecha(java.time.LocalDate.now());
+                notification.setUs(user);
+                nR.save(notification);
+                
                 // Emitir WebSocket
                 messagingTemplate.convertAndSend("/topic/notificaciones/" + user.getIdUser(), "Tu reciclaje ha sido APROBADO. ¡Ganaste " + a.getPuntos() + " puntos!");
             }
@@ -102,6 +112,13 @@ public class ActividadServiceImplement implements IActividadService {
         aR.save(a);
         // No se suman puntos.
         if (a.getU() != null) {
+            // Guardar notificación en BD
+            pe.edu.pe.grupo2.entities.Notificaciones notification = new pe.edu.pe.grupo2.entities.Notificaciones();
+            notification.setMensaje("Tu reciclaje ha sido RECHAZADO.");
+            notification.setFecha(java.time.LocalDate.now());
+            notification.setUs(a.getU());
+            nR.save(notification);
+            
             messagingTemplate.convertAndSend("/topic/notificaciones/" + a.getU().getIdUser(), "Tu reciclaje ha sido RECHAZADO.");
         }
     }

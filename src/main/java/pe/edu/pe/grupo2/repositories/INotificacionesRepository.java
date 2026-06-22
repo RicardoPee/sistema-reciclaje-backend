@@ -34,4 +34,6 @@ public interface INotificacionesRepository extends JpaRepository<Notificaciones,
             nativeQuery = true)
     public List<String[]> Top3UsuariosConMasNotificaciones(@Param("fechaInicio") LocalDate fechaInicio,
                                                             @Param("fechaFin") LocalDate fechaFin);
+
+    public List<Notificaciones> findByUsIdUserOrderByIdNotificacionesDesc(int userId);
 }

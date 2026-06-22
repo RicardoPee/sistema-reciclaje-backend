@@ -5,8 +5,11 @@ import pe.edu.pe.grupo2.entities.Rol;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+
 public class UserDTO {
-      private int idUser;
+    @JsonAlias({"id_user", "idUser"})
+    private int idUser;
     private String username;
     private String password;
     private String nombres;
@@ -19,6 +22,7 @@ public class UserDTO {
     private String correo;
     private Rol rol;
     private Boolean enabled;
+    @JsonAlias({"puntos_acumulados", "puntosAcumulados"})
     private Integer puntosAcumulados = 0;
 
     public int getIdUser() {

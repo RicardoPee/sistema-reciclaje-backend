@@ -25,6 +25,12 @@ public class ReclamacionesServiceImplement implements IReclamacionesService {
     @Autowired
     private IRecompensasRepository recR;
 
+    @Autowired
+    private pe.edu.pe.grupo2.repositories.INotificacionesRepository nR;
+
+    @Autowired
+    private org.springframework.messaging.simp.SimpMessagingTemplate messagingTemplate;
+
     @Override
     @Transactional
     public void insert(Reclamaciones reclamaciones) {
@@ -61,6 +67,16 @@ public class ReclamacionesServiceImplement implements IReclamacionesService {
         }
 
         rR.save(reclamaciones);
+
+        // ── Guardar notificación en BD ──────────────────────────────
+        pe.edu.pe.grupo2.entities.Notificaciones notification = new pe.edu.pe.grupo2.entities.Notificaciones();
+        notification.setMensaje("¡Canjeaste con éxito la recompensa: " + r.getNombreRecompensa() + "!");
+        notification.setFecha(java.time.LocalDate.now());
+        notification.setUs(u);
+        nR.save(notification);
+
+        // ── Emitir WebSocket ─────────────────────────────────────────
+        messagingTemplate.convertAndSend("/topic/notificaciones/" + u.getIdUser(), "¡Canjeaste con éxito la recompensa: " + r.getNombreRecompensa() + "!");
     }
 
     @Override

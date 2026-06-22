@@ -90,4 +90,12 @@ public class NotificacionesController {
         }
         return dtoLista;
     }
+
+    @GetMapping("/usuario/{userId}")
+    public List<NotificacionesDTO> listarPorUsuario(@PathVariable("userId") int userId) {
+        return nS.listByUsuario(userId).stream().map(x -> {
+            ModelMapper m = new ModelMapper();
+            return m.map(x, NotificacionesDTO.class);
+        }).collect(Collectors.toList());
+    }
 }

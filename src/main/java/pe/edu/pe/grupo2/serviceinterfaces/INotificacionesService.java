@@ -16,6 +16,5 @@ public interface INotificacionesService {
 
     public List<String[]> PromedioNotificacionesPorDiaUsuario(LocalDate fechaInicio,LocalDate fechaFin, int userId);
     public List<String[]> Top3UsuariosConMasNotificaciones(LocalDate fechaInicio, LocalDate fechaFin);
-
-
+    public List<Notificaciones> listByUsuario(int userId);
 }

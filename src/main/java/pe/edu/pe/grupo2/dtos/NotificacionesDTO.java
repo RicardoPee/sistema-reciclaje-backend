@@ -7,7 +7,10 @@ import pe.edu.pe.grupo2.entities.User;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+
 public class NotificacionesDTO {
+    @JsonAlias({"id_notificaciones", "idNotificaciones"})
     private int idNotificaciones;
     private String mensaje;
     private LocalDate fecha;

@@ -54,5 +54,8 @@ public class NotificacionesServiceImplement implements INotificacionesService {
         return nR.Top3UsuariosConMasNotificaciones(fechaInicio, fechaFin);
     }
 
-
+    @Override
+    public List<Notificaciones> listByUsuario(int userId) {
+        return nR.findByUsIdUserOrderByIdNotificacionesDesc(userId);
+    }
 }
