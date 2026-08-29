@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\JAIRA\\Documents\\Arqui\\Trabajo_Final\\BACKEND-ARQUIWEB-main\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JAIRA\\Documents\\Arqui\\Trabajo_Final\\BACKEND-ARQUIWEB-main\\src\\main\\resources\\application.properties||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\resources\\application.properties||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JAIRA\\Documents\\Arqui\\Trabajo_Final\\BACKEND-ARQUIWEB-main\\pom.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pom.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JAIRA\\Documents\\Arqui\\Trabajo_Final\\BACKEND-ARQUIWEB-main\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JAIRA\\Documents\\Arqui\\Trabajo_Final\\BACKEND-ARQUIWEB-main\\src\\main\\java\\pe\\edu\\pe\\grupo2\\Grupo2Application.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\pe\\edu\\pe\\grupo2\\Grupo2Application.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,63 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{08a1bf1d-7967-4afc-8253-1790862ab8c9}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "application.properties",
-              "DocumentMoniker": "C:\\Users\\JAIRA\\Documents\\Arqui\\Trabajo_Final\\BACKEND-ARQUIWEB-main\\src\\main\\resources\\application.properties",
-              "RelativeDocumentMoniker": "src\\main\\resources\\application.properties",
-              "ToolTip": "C:\\Users\\JAIRA\\Documents\\Arqui\\Trabajo_Final\\BACKEND-ARQUIWEB-main\\src\\main\\resources\\application.properties",
-              "RelativeToolTip": "src\\main\\resources\\application.properties",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-19T22:16:39.778Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "pom.xml",
-              "DocumentMoniker": "C:\\Users\\JAIRA\\Documents\\Arqui\\Trabajo_Final\\BACKEND-ARQUIWEB-main\\pom.xml",
-              "RelativeDocumentMoniker": "pom.xml",
-              "ToolTip": "C:\\Users\\JAIRA\\Documents\\Arqui\\Trabajo_Final\\BACKEND-ARQUIWEB-main\\pom.xml",
-              "RelativeToolTip": "pom.xml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2026-05-19T22:16:33.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\JAIRA\\Documents\\Arqui\\Trabajo_Final\\BACKEND-ARQUIWEB-main\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\JAIRA\\Documents\\Arqui\\Trabajo_Final\\BACKEND-ARQUIWEB-main\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-19T22:16:27.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Grupo2Application.java",
-              "DocumentMoniker": "C:\\Users\\JAIRA\\Documents\\Arqui\\Trabajo_Final\\BACKEND-ARQUIWEB-main\\src\\main\\java\\pe\\edu\\pe\\grupo2\\Grupo2Application.java",
-              "RelativeDocumentMoniker": "src\\main\\java\\pe\\edu\\pe\\grupo2\\Grupo2Application.java",
-              "ToolTip": "C:\\Users\\JAIRA\\Documents\\Arqui\\Trabajo_Final\\BACKEND-ARQUIWEB-main\\src\\main\\java\\pe\\edu\\pe\\grupo2\\Grupo2Application.java",
-              "RelativeToolTip": "src\\main\\java\\pe\\edu\\pe\\grupo2\\Grupo2Application.java",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
-              "WhenOpened": "2026-05-19T22:16:24.167Z",
-              "EditorCaption": ""
             }
           ]
         }

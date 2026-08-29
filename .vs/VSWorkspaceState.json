@@ -8,9 +8,8 @@
     "\\src\\main\\java\\pe\\edu",
     "\\src\\main\\java\\pe\\edu\\pe",
     "\\src\\main\\java\\pe\\edu\\pe\\grupo2",
-    "\\src\\main\\java\\pe\\edu\\pe\\grupo2\\controllers",
-    "\\src\\main\\java\\pe\\edu\\pe\\grupo2\\securities"
+    "\\src\\main\\resources"
   ],
-  "SelectedNode": "\\src\\main\\java\\pe\\edu\\pe\\grupo2\\controllers\\JwtAuthenticationController.java",
+  "SelectedNode": "\\src\\main\\resources\\application.properties",
   "PreviewInSolutionExplorer": false
 }

@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import pe.edu.pe.grupo2.entities.Actividad;
 import pe.edu.pe.grupo2.repositories.IActividadRepository;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.context.annotation.Lazy;
 import pe.edu.pe.grupo2.serviceinterfaces.IActividadService;
 import java.util.List;
 import java.util.Random;
@@ -23,6 +24,7 @@ public class ActividadServiceImplement implements IActividadService {
     private pe.edu.pe.grupo2.repositories.INotificacionesRepository nR;
 
     @Autowired
+    @Lazy
     private SimpMessagingTemplate messagingTemplate;
 
     private static final String CHARS = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
